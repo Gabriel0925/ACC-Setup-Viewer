@@ -13,7 +13,13 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="ACC Setup Viewer">
-    <link rel="apple-touch-icon" href="/assets/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("./sw")
+        }
+    </script>
     
 </head>
 <body>
