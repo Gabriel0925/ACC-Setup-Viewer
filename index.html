@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ACC Setup Viewer</title>
 
-    <link rel="icon" type="image/png" href="logo_acc_app.PNG">
+    <link rel="icon" type="image/png" href="assets/icon-navigateur.png">
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 
@@ -15,11 +15,7 @@
     <meta name="apple-mobile-web-app-title" content="ACC Setup Viewer">
     <link rel="apple-touch-icon" href="assets/icon-192.png">
 
-    <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("sw.js")
-        }
-    </script>
+    <script src="assets/configuration-sw.js"></script>
     
 </head>
 <body>
@@ -28,7 +24,7 @@
         <header>
 
             <div class="badge">
-                <img src="logo_acc_app.PNG" alt="Assetto Corsa Competizione">
+                <img src="assets/icon-navigateur.png" alt="Assetto Corsa Competizione">
             </div>
 
             <div>
