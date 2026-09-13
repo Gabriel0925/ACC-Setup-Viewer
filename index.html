@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ACC Setup Viewer</title>
+
+    <link rel="icon" type="image/png" href="logo_acc_app.PNG">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ACC Setup Viewer">
+    <link rel="apple-touch-icon" href="/assets/icon-192.png">
+    
+</head>
+<body>
+    <div class="app">
+        
+        <header>
+
+            <div class="badge">
+                <img src="logo_acc_app.PNG" alt="Assetto Corsa Competizione">
+            </div>
+
+            <div>
+                <div class="title">CAR SETUP</div>
+                <div class="sub">SETUP VIEWER · LOCAL EDITOR</div>
+            </div>
+
+            <div class="actions">
+                <label class="btn" for="file">LOAD SETUP</label>
+                <input id="file" type="file" accept=".json,application/json" hidden>
+                <button id="save" class="btn primary" disabled>SAVE SETUP</button>
+            </div>
+
+        </header>
+
+        <nav id="tabs" class="tabs" aria-label="Setup categories"></nav>
+
+        <div class="layout">
+        
+            <main class="stage">
+                <div id="notice" class="notice" aria-live="polite"></div>
+
+                <div id="content" class="empty">
+                    <h2>Load an ACC setup</h2>
+                    <p>Choose or drop a downloaded setup JSON. Settings are sorted into ACC-style setup pages and saved as a new file.</p>
+                    <label class="btn primary" for="file">Load JSON setup</label>
+                </div>
+
+                <div class="footer">
+                    The editor always keeps your original JSON unchanged. Tyre-pressure values are displayed as JSON value ÷ 10 + 20.2 PSI.
+                </div>
+            </main>
+
+            <aside class="side">
+
+                <h2>Setup information</h2>
+                <div class="sidebody">
+                    <h3 id="helpTitle">Select a setup</h3>
+                    <p id="helpText">Load a setup to inspect and adjust its available values. The highlighted controls use the same left/right adjustment pattern as ACC.</p>
+                    <div id="fileLine" class="fileline">No file loaded</div>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
